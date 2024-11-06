@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat",sans-serif;
+}
+.Heading{
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align:center;
+}
+.navbar{
+    height: 50px;
+    font-family: "Montserrat",sans-serif;
+    display: flex;
+    align-items: center;
+    color:  #4CAF50;;
+    justify-content: center;
+    box-shadow: 0 3px 3px rgb(230, 237, 167);
+    padding-inline: 10vw;
+}
+.list{
+    display: flex;
+    gap: 30px;
+}
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Smaller gap between tasks */
+  }
+  
+  .todo-container {
+    background-color: #f8f8f8; /* Light background */
+    padding: 8px 16px; /* Less padding for a compact look */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px; /* Smaller font */
+    color: #333;
+  }
+  
+  .todo-container.completed {
+    background-color: #e6f8e0; /* Light green background for completed tasks */
+  }
+  
+  .todo-content {
+    flex-grow: 1;
+  }
+  
+  .todo-content h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .todo-date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+  }
+  
+  .todo-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tick-mark {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-right: 10px;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  button:hover {
+    color: #333;
+  }
+  .full-container {
+    max-width: 600px; /* Set a maximum width to make it smaller */
+    margin: 50px auto; /* Center it horizontally */
+    padding: 20px; /* Add some padding for spacing */
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  }
+  
+  .todo-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .todo-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  
+  .add-todo-button {
+    background-color: #4A90E2; /* Blue color similar to the reference */
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-todo-button:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+  }
+    
