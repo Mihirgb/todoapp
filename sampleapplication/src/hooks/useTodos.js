@@ -13,10 +13,14 @@ const useTodos = () => {
     fetchTodos();
   }, []);
 
-  const addTodo = async (title) => {
-    const response = await axios.post('http://localhost:8080/api/todos', { title });
-    setTodos([...todos, response.data]);
-  };
+  const addTodo = async (title, dueDate) => {
+  // Convert dueDate to ISO format if it's provided
+  const dueDateToSend = dueDate ? new Date(dueDate).toISOString() : null;
+
+  const response = await axios.post('http://localhost:8080/api/todos', { title, dueDate: dueDateToSend });
+  setTodos([...todos, response.data]);
+};
+
 
   const toggleComplete = async (id, completed) => {
     const response = await axios.put(`http://localhost:8080/api/todos/${id}`, { completed: !completed });

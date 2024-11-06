@@ -109,7 +109,7 @@
   }
   
   .add-todo-button {
-    background-color: #4A90E2; /* Blue color similar to the reference */
+    background-color: #4CAF50; /* Blue color similar to the reference */
     color: white;
     border: none;
     font-size: 24px;
@@ -127,6 +127,58 @@
   }
   
   .add-todo-button:hover {
-    background-color: #357ABD; /* Darker blue on hover */
+    background-color: #4CAF50; /* Darker blue on hover */
   }
     
+  .task-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    /* font-family: Arial, sans-serif; */
+  }
+  
+  .task-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .task-form input[type="text"],
+  .task-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  .task-form input[type="text"]:focus,
+  .task-form input[type="date"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .task-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-form button[type="submit"]:hover {
+    background-color: #518153;
+  }
+  

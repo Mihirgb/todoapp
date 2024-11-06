@@ -11,6 +11,14 @@ const TodoSchema = new mongoose.Schema({
     createdAt: {
       type: Date,
       default: Date.now
+    },
+    dueDate:{
+      type:Date,
+      default: ()=>{
+        const tomorow=new Date()
+        tomorow.setDate(tomorow.getDate()+1)
+        return tomorow
+      }
     }
   });
   

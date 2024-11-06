@@ -10,13 +10,25 @@ router.get('/', async (req, res) => {
 
 // Create a new todo
 router.post('/', async (req, res) => {
-  const todo = new Todo({
-    title: req.body.title,
-  });
-  await todo.save();
-  res.json(todo);
-});
+  const { title, dueDate } = req.body;
 
+  // try {
+    const validDueDate = dueDate && !isNaN(new Date(dueDate)) ? new Date(dueDate) : undefined;
+
+    // if (!validDueDate) {
+    //   return res.status(400).json({ error: "Invalid dueDate format" });
+    // }
+
+    const todo = new Todo({
+      title,
+      dueDate: validDueDate
+    });
+    await todo.save();
+    res.json(todo);
+  // } catch (error) {
+  //   res.status(500).json({ error: 'Failed to create task' });
+  // }
+});
 // Update a todo
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
