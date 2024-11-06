@@ -2,11 +2,12 @@ const express=require('express')
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const todoRoutes = require('./routes/todoroutes');
+const todoRoutes = require('../routes/todoroutes');
 const app=express()
 
 app.use(bodyParser.json());
 app.use(cors());
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
 app.use('/api/todos', todoRoutes);
 mongoose.connect('mongodb+srv://mihirgajbhiye20:mihir123@todolistcluster.3rloh.mongodb.net/?retryWrites=true&w=majority&appName=todolistcluster', { useNewUrlParser: true, useUnifiedTopology: true })
